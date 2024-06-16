@@ -9,7 +9,15 @@ export default {
     components: {
     },
     methods: {
-
+        activateLink(pos) {
+            let linkList = document.querySelectorAll('ul .link');
+            linkList.forEach(link => {
+                if (link.classList.contains('active')) {
+                    link.classList.remove('active');
+                }
+            });
+            linkList[pos].classList.add('active');
+        }
     },
 }
 </script>
@@ -19,10 +27,10 @@ export default {
         <div class="container">
             <div class="d-flex align-items-center justify-content-between">
                 <ul class="d-flex gap-3 align-items-center m-0 py-4 text-uppercase">
-                    <li><a class="link active" href="#home">Home</a></li>
-                    <li><a class="link" href="#about">About Me</a></li>
-                    <li><a class="link" href="#">Photos</a></li>
-                    <li><a class="link" href="#">Categories</a></li>
+                    <li><a @click="activateLink(0)" class="link active" href="#home">Home</a></li>
+                    <li><a @click="activateLink(1)" class="link" href="#about">About Me</a></li>
+                    <li><a @click="activateLink(2)" class="link" href="#">Photos</a></li>
+                    <li><a @click="activateLink(3)" class="link" href="#">Application</a></li>
                 </ul>
                 <div>
                     <a class="secondary-link text-uppercase" href="#">Let's Talk <i

@@ -44,7 +44,6 @@ export default {
                                     :class="i == 0 ? 'active' : ''" :aria-current="i == 0 ? 'true' : ''"
                                     :aria-label="'Slide' + ' ' + (i + 1)">
                                 </button>
-
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item rounded-3" :class="i == 0 ? 'active' : ''"
