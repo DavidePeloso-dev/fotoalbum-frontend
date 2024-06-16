@@ -1,0 +1,94 @@
+/*#region reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*#endregion*/
+
+:root {
+  --bg-app: #101010;
+  --primary-app: #DDF247;
+  --ligth-app: #F4F4F2;
+  --accent-app: #F1511B;
+}
+
+body {
+  background-color: var(--bg-app);
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  background-image: url(/wave.svg);
+  background-size: 200%;
+  background-position: 50% 50%;
+  backdrop-filter: blur(1.5px);
+}
+
+/*#region header*/
+
+.link {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--ligth-app);
+  color: var(--ligth-app);
+  text-decoration: none;
+  border-radius: 2rem;
+}
+
+.link.active {
+  background-color: var(--primary-app);
+  border-color: var(--primary-app);
+  color: var(--bg-app);
+  font-weight: bold;
+}
+
+.secondary-link {
+  border-bottom: 3px solid var(--primary-app);
+  padding-bottom: 0.2rem;
+  color: var(--ligth-app);
+  text-decoration: none;
+
+  .arrow {
+    color: var(--primary-app);
+    font-weight: bold;
+  }
+}
+
+/*#endregion*/
+
+/*#region main*/
+
+main {
+  min-height: 100vh;
+}
+
+.text-primary-app {
+  color: var(--primary-app);
+}
+
+.text-accent {
+  color: var(--accent-app);
+}
+
+.img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+#about {
+  height: 50vh;
+}
+
+/*#endregion*/
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    background-size: 400%;
+
+  }
+}
