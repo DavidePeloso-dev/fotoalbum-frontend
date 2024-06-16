@@ -24,9 +24,9 @@ export default {
                 </div>
                 <div class="col">
                     <p>Hello! I'm Jhon Dho, a passionate photographer with a love for capturing life's most beautiful
-                        moments. With over [number] years of experience, my journey through the lens has taken me from
+                        moments. With over 20 years of experience, my journey through the lens has taken me from
                         intimate portraits to breathtaking landscapes. My style blends creativity and authenticity,
-                        aiming to tell unique stories through every photograph. Based in [Your Location], I am dedicated
+                        aiming to tell unique stories through every photograph. I am dedicated
                         to providing a personalized and professional experience for all my clients. Let's create
                         something unforgettable together!</p>
                 </div>
