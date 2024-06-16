@@ -1,45 +1,36 @@
 <script>
-import axios from 'axios';
+import AboutMe from './AboutMe.vue';
+import { state } from '../state.js';
 export default {
     name: 'MainApp',
     data() {
         return {
-            base_api_url: 'http://127.0.0.1:8000',
-            photos_endpoint: '/api/photos/evidence',
-            photos: '',
+            state,
         }
     },
     components: {
+        AboutMe
     },
     methods: {
 
     },
     mounted() {
-        let api_url = this.base_api_url + this.photos_endpoint;
-        axios
-            .get(api_url)
-            .then(resp => {
-                this.photos = resp.data.results
-                console.log(this.photos);
-            })
-            .catch(err => {
-                console.error(err);
-            })
+        state.getEvidencePhotos();
     }
 }
 </script>
 
 <template>
     <main>
-        <div class="wrapper">
-            <div id="home" class="container pt-5">
+        <div id="home" class="wrapper">
+            <div class="container">
                 <h1 class="text-white text-center name mt-5">Jhon<span class="text-primary-app ms-3">Dho</span></h1>
                 <h3 class="text-uppercase text-center text-accent">Capturing life's essence through lens</h3>
                 <div class="row row-cols-1 row-cols-lg-2 pt-5">
                     <div class="col mb-3">
                         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
-                                <button v-for="(photo, i) in photos.data" type="button"
+                                <button v-for="(photo, i) in state.evidence_photos.data" type="button"
                                     data-bs-target="#carouselExampleAutoplaying" :data-bs-slide-to="i"
                                     :class="i == 0 ? 'active' : ''" :aria-current="i == 0 ? 'true' : ''"
                                     :aria-label="'Slide' + ' ' + (i + 1)">
@@ -47,10 +38,10 @@ export default {
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item rounded-3" :class="i == 0 ? 'active' : ''"
-                                    v-for="(photo, i) in photos.data">
+                                    v-for="(photo, i) in state.evidence_photos.data">
                                     <img v-if="photo.image && photo.image.startsWith('https://')" :src="photo.image"
                                         class="d-block w-100 img rounded-3" :alt="photo.title">
-                                    <img v-else-if="photo.image" :src="base_api_url + '/storage/' + photo.image"
+                                    <img v-else-if="photo.image" :src="state.base_api_url + '/storage/' + photo.image"
                                         class="d-block w-100 img rounded-3" :alt="photo.title">
                                 </div>
                                 <button class="carousel-control-prev" type="button"
@@ -101,7 +92,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div id="about"></div>
+        <AboutMe></AboutMe>
     </main>
 </template>
 

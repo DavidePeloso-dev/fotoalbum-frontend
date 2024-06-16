@@ -27,6 +27,7 @@ body {
   background-size: 200%;
   background-position: 50% 50%;
   backdrop-filter: blur(1.5px);
+  padding: 2rem 0;
 }
 
 /*#region header*/
@@ -81,7 +82,8 @@ main {
 }
 
 #about {
-  height: 50vh;
+  padding: 2rem 0;
+  background-color: var(--ligth-app);
 }
 
 /*#endregion*/
