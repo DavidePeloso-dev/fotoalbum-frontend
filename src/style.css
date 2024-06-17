@@ -88,6 +88,31 @@ main {
 
 /*#endregion*/
 
+/*#region application*/
+
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 #f1501b21;
+}
+
+.btn-primary-app {
+  background-color: var(--primary-app);
+  padding: 0.5rem 1rem;
+  height: min-content;
+  color: var(--bg-app);
+}
+
+.btn-primary-app:hover {
+  background-color: var(--primary-app);
+  opacity: 0.8;
+  color: var(--bg-app);
+}
+
+/*#endregion*/
+
 @media screen and (max-width: 992px) {
   .wrapper {
     background-size: 400%;

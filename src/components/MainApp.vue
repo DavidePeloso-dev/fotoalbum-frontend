@@ -30,7 +30,7 @@ export default {
                     <div class="col mb-3">
                         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
-                                <button v-for="(photo, i) in state.evidence_photos.data" type="button"
+                                <button v-for="(photo, i) in state.evidence_photos" type="button"
                                     data-bs-target="#carouselExampleAutoplaying" :data-bs-slide-to="i"
                                     :class="i == 0 ? 'active' : ''" :aria-current="i == 0 ? 'true' : ''"
                                     :aria-label="'Slide' + ' ' + (i + 1)">
@@ -38,7 +38,7 @@ export default {
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item rounded-3" :class="i == 0 ? 'active' : ''"
-                                    v-for="(photo, i) in state.evidence_photos.data">
+                                    v-for="(photo, i) in state.evidence_photos">
                                     <img v-if="photo.image && photo.image.startsWith('https://')" :src="photo.image"
                                         class="d-block w-100 img rounded-3" :alt="photo.title">
                                     <img v-else-if="photo.image" :src="state.base_api_url + '/storage/' + photo.image"
@@ -109,8 +109,12 @@ export default {
     aspect-ratio: 16/9;
 }
 
-.carousel-indicators .active {
-    background-color: var(--primary-app);
+.carousel-indicators {
+    background-color: #11101054;
+
+    .active {
+        background-color: var(--primary-app);
+    }
 }
 
 .btn-primary-app {
