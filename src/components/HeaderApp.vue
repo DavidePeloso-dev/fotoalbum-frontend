@@ -40,8 +40,7 @@ export default {
                 <ul class="d-flex gap-3 align-items-center m-0 py-4 text-uppercase">
                     <li><a @click="activateLink(0)" class="link active" href="#home">Home</a></li>
                     <li><a @click="activateLink(1)" class="link" href="#about">About Me</a></li>
-                    <li><a @click="activateLink(2)" class="link" href="#">Photos</a></li>
-                    <li><a @click="activateApplicationLink(3)" class="link" href="../../aplication.html">Application</a>
+                    <li><a @click="activateApplicationLink(2)" class="link" href="../../aplication.html">Photos</a>
                     </li>
                 </ul>
                 <div>

@@ -28,7 +28,7 @@ export default {
             <div class="d-flex align-items-center justify-content-between">
                 <ul class="d-flex gap-3 align-items-center m-0 py-4 text-uppercase">
                     <li><a @click="activateLink(0)" class="link" href="../../index.html">Home</a></li>
-                    <li><a @click="activateLink(1)" class="link active" href="../../aplication.html">Application</a>
+                    <li><a @click="activateLink(1)" class="link active" href="../../aplication.html">Photos</a>
                     </li>
                 </ul>
                 <div>
