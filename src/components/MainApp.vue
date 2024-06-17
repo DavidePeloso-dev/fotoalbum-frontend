@@ -77,14 +77,14 @@ export default {
                                         <br> Happy Clients
                                     </h6>
                                 </div>
-                                <p class="card-text mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <p class="card-text mt-1 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Adipisci
                                     numquam quis cupiditate, nesciunt aperiam distinctio minus blanditiis maxime fuga
                                     dolore
                                     eaque omnis eos ut eligendi tenetur culpa temporibus modi voluptatibus.
                                 </p>
                                 <a href="#"
-                                    class="btn text-uppercase btn-primary-app position-absolute end-0 me-3 bottom-0 mb-3">Let's
+                                    class="btn text-uppercase btn-sm btn-primary-app position-absolute end-0 me-3 bottom-0 mb-3">Let's
                                     Talk <i class="arrow bi bi-arrow-up-right"></i></a>
                             </div>
                         </div>
@@ -151,5 +151,17 @@ export default {
 
 .card-title {
     translate: -25%;
+}
+
+@media screen and (max-width:576px) {
+    .name {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .name {
+        font-size: 5rem;
+    }
 }
 </style>

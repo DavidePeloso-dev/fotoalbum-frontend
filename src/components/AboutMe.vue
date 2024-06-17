@@ -34,9 +34,9 @@ export default {
             <div class="row row-cols-1 row-cols-md-3 my-5">
                 <div class="col" v-for="photo in state.about_photos">
                     <img v-if="photo.image && photo.image.startsWith('https://')" :src="photo.image"
-                        class="d-block w-100 img rounded-3" :alt="photo.title">
+                        class="d-block w-100 img rounded-3 mb-3" :alt="photo.title">
                     <img v-else-if="photo.image" :src="state.base_api_url + '/storage/' + photo.image"
-                        class="d-block w-100 img rounded-3" :alt="photo.title">
+                        class="d-block w-100 img rounded-3 mb-3" :alt="photo.title">
                 </div>
             </div>
         </div>
