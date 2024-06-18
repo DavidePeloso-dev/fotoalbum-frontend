@@ -49,8 +49,13 @@ export default {
 
                 <button type="submit" class="btn btn-primary-app btn-sm mb-3">Search</button>
             </form>
-            <div v-if="state.photos.data != ''" class="row mt-3 row-cols-1 row-cols-md-3 flex-wrap">
-                {{ console.log(state.photos.data) }}
+            {{ console.log(state.photos) }}
+            <div class="row mt-3 " v-if="state.photos == ''">
+                <div class="col text-center mt-5 loader">
+                    <i class="text-accent fs-1 mt-5 fa-solid fa-spinner fa-spin-pulse"></i>
+                </div>
+            </div>
+            <div v-else-if="state.photos.data != ''" class="row mt-3 row-cols-1 row-cols-md-3 flex-wrap">
                 <div class="col" v-for="photo in state.photos.data">
                     <div class="card glass text-white mb-3 rounded-3">
                         <img v-if="photo.image && photo.image.startsWith('https://')" :src="photo.image"

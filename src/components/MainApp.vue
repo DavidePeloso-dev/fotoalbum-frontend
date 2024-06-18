@@ -27,7 +27,7 @@ export default {
                 <h1 class="text-white text-center name mt-5">Jhon<span class="text-primary-app ms-3">Dho</span></h1>
                 <h3 class="text-uppercase text-center text-accent">Capturing life's essence through lens</h3>
                 <div class="row row-cols-1 row-cols-lg-2 pt-5">
-                    <div class="col mb-3">
+                    <div v-if="state.evidence_photos != ''" class="col mb-3">
                         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button v-for="(photo, i) in state.evidence_photos" type="button"
@@ -55,6 +55,12 @@ export default {
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                    <div v-else class="col mb-3">
+                        <div
+                            class="card flex-row text-white justify-content-center align-items-center loader rounded-3">
+                            <i class="text-accent fs-4 fa-solid fa-spinner fa-spin-pulse"></i>
                         </div>
                     </div>
                     <div class="col">
